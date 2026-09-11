@@ -2,10 +2,10 @@
 // src/pages/demos/dental.astro
 import '../../styles/global.css';
 
-const clinicName = "Apex Dental Care & Implant Center";
-const clinicPhone = "+91 98111 22334";
-const clinicPhoneRaw = "919811122334";
-const clinicAddress = "Plot 42, Main Market Road, Near Metro Pillar 120, South Delhi";
+const clinicName = "Arya Dental Clinic and Orthodontics Centre";
+const clinicPhone = "+919518102545";
+const clinicPhoneRaw = "+919518102545";
+const clinicAddress = "Shop 1, Block A1, Chhatarpur Extension, Chhatarpur, New Delhi, Delhi 110063";
 const mapsUrl = `https://www.google.com/maps/search/?api=1&query=${encodeURIComponent(clinicName + " " + clinicAddress)}`;
 const waMessage = encodeURIComponent("Hi Dr. Sharma, I would like to book a dental consultation appointment.");
 ---
@@ -33,7 +33,7 @@ const waMessage = encodeURIComponent("Hi Dr. Sharma, I would like to book a dent
             🦷
           </span>
           <div>
-            <div class="font-black text-slate-900 leading-tight tracking-tight text-lg">APEX DENTAL</div>
+            <div class="font-black text-slate-900 leading-tight tracking-tight text-lg">{clinicName}</div>
             <div class="text-[10px] uppercase font-bold tracking-wider text-cyan-600">Implant & Smile Studio</div>
           </div>
         </div>
@@ -321,20 +321,17 @@ const waMessage = encodeURIComponent("Hi Dr. Sharma, I would like to book a dent
           </div>
 
           <!-- Maps Preview Container -->
-          <div class="rounded-2xl border border-slate-200 overflow-hidden bg-slate-100 flex flex-col items-center justify-center p-8 text-center min-h-[280px]">
-            <span class="text-5xl mb-3">🗺️</span>
-            <div class="font-bold text-slate-800 text-sm">Interactive Map Embed</div>
-            <p class="text-xs text-slate-500 max-w-xs mt-1">
-              On the final client site, this block is replaced with their direct Google Maps embed iframe.
-            </p>
-            <a 
-              href={mapsUrl} 
-              target="_blank" 
-              class="mt-4 text-xs font-bold text-cyan-700 underline"
-            >
-              Test Live Maps Trigger &rarr;
-            </a>
-          </div>
+          <!-- Maps Embed Container -->
+<div class="rounded-2xl border border-slate-200 overflow-hidden bg-slate-100 shadow-sm min-h-[350px] h-full w-full">
+  <iframe 
+    src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d43758.37242249392!2d77.11212566962818!3d28.4939633!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x390d1f005dd8074b%3A0x4aa575c3ef95928!2sArya%20Dental%20Clinic%20and%20Orthodontics%20Centre!5e1!3m2!1sen!2sin!4v1789152762291!5m2!1sen!2sin" 
+    class="w-full h-full min-h-[350px]"
+    style="border:0;" 
+    allowfullscreen="" 
+    loading="lazy" 
+    referrerpolicy="strict-origin-when-cross-origin">
+  </iframe>
+</div>
         </div>
       </section>
     </main>
