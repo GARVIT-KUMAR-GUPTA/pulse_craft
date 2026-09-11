@@ -1,0 +1,364 @@
+---
+// src/pages/demos/dental.astro
+import '../../styles/global.css';
+
+const clinicName = "Apex Dental Care & Implant Center";
+const clinicPhone = "+91 98111 22334";
+const clinicPhoneRaw = "919811122334";
+const clinicAddress = "Plot 42, Main Market Road, Near Metro Pillar 120, South Delhi";
+const mapsUrl = `https://www.google.com/maps/search/?api=1&query=${encodeURIComponent(clinicName + " " + clinicAddress)}`;
+const waMessage = encodeURIComponent("Hi Dr. Sharma, I would like to book a dental consultation appointment.");
+---
+
+<!DOCTYPE html>
+<html lang="en" class="scroll-smooth">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>{clinicName} | Advanced Painless Dentistry</title>
+    <meta name="description" content="State-of-the-art dental clinic offering painless root canals, implants, and cosmetic teeth alignment." />
+  </head>
+  <body class="bg-slate-50 text-slate-800 font-sans antialiased pb-20 md:pb-0">
+
+    <!-- Top Announcement Bar -->
+    <div class="bg-cyan-900 text-cyan-100 text-xs py-2 px-4 text-center font-medium">
+      ✨ Accepting New Patients • Evening & Sunday Slots Available
+    </div>
+
+    <!-- Main Navigation -->
+    <header class="sticky top-0 z-30 bg-white/95 backdrop-blur-md border-b border-slate-200">
+      <div class="max-w-6xl mx-auto px-4 h-18 flex items-center justify-between">
+        <div class="flex items-center gap-2">
+          <span class="w-10 h-10 rounded-xl bg-cyan-600 text-white flex items-center justify-center font-bold text-xl shadow-md shadow-cyan-600/20">
+            🦷
+          </span>
+          <div>
+            <div class="font-black text-slate-900 leading-tight tracking-tight text-lg">APEX DENTAL</div>
+            <div class="text-[10px] uppercase font-bold tracking-wider text-cyan-600">Implant & Smile Studio</div>
+          </div>
+        </div>
+
+        <nav class="hidden md:flex gap-7 text-sm font-semibold text-slate-600">
+          <a href="#services" class="hover:text-cyan-600 transition">Treatments</a>
+          <a href="#hygiene" class="hover:text-cyan-600 transition">Sterilization Standards</a>
+          <a href="#reviews" class="hover:text-cyan-600 transition">Patient Reviews</a>
+          <a href="#contact" class="hover:text-cyan-600 transition">Timings & Location</a>
+        </nav>
+
+        <div class="hidden sm:flex items-center gap-3">
+          <a 
+            href={`tel:${clinicPhoneRaw}`}
+            class="text-xs font-bold text-slate-700 hover:text-cyan-700 px-3 py-2"
+          >
+            Call Desk: {clinicPhone}
+          </a>
+          <a 
+            href={`https://wa.me/${clinicPhoneRaw}?text=${waMessage}`}
+            target="_blank"
+            class="bg-emerald-600 hover:bg-emerald-500 text-white text-xs font-bold px-4 py-2.5 rounded-lg shadow-md shadow-emerald-600/20 transition flex items-center gap-1.5"
+          >
+            <span>Book on WhatsApp</span>
+          </a>
+        </div>
+      </div>
+    </header>
+
+    <main>
+      <!-- Hero Section -->
+      <section class="py-12 md:py-20 px-4 max-w-6xl mx-auto">
+        <div class="grid grid-cols-1 lg:grid-cols-12 gap-10 items-center">
+          <div class="lg:col-span-7 text-center lg:text-left">
+            <div class="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-cyan-50 border border-cyan-200 text-cyan-800 text-xs font-bold mb-4">
+              <span class="text-amber-500">★★★★★</span> 4.9 Rating (140+ Google Reviews)
+            </div>
+            <h1 class="text-3xl md:text-5xl font-black text-slate-900 tracking-tight leading-tight">
+              Painless, Gentle Dental Care For Your Whole Family
+            </h1>
+            <p class="mt-4 text-base md:text-lg text-slate-600 leading-relaxed max-w-xl mx-auto lg:mx-0">
+              From advanced digital implants to single-sitting root canals, our clinic combines hospital-grade sterilization with transparent, upfront pricing.
+            </p>
+
+            <div class="mt-8 flex flex-col sm:flex-row gap-3 justify-center lg:justify-start">
+              <a 
+                href={`https://wa.me/${clinicPhoneRaw}?text=${waMessage}`}
+                target="_blank"
+                class="bg-emerald-600 hover:bg-emerald-500 text-white font-bold px-6 py-3.5 rounded-xl shadow-lg shadow-emerald-600/25 transition text-center flex items-center justify-center gap-2"
+              >
+                <span>📅 Book WhatsApp Appointment</span>
+              </a>
+              <a 
+                href={mapsUrl}
+                target="_blank"
+                class="border border-slate-300 bg-white hover:bg-slate-50 text-slate-700 font-bold px-6 py-3.5 rounded-xl transition text-center flex items-center justify-center gap-2 shadow-sm"
+              >
+                <span>📍 Get Directions (Google Maps)</span>
+              </a>
+            </div>
+
+            <!-- Quick Badges -->
+            <div class="mt-10 grid grid-cols-3 gap-4 pt-8 border-t border-slate-200 text-left">
+              <div>
+                <div class="text-xl md:text-2xl font-black text-slate-900">12+</div>
+                <div class="text-xs text-slate-500 font-medium">Years Experience</div>
+              </div>
+              <div>
+                <div class="text-xl md:text-2xl font-black text-slate-900">4,500+</div>
+                <div class="text-xs text-slate-500 font-medium">Patients Treated</div>
+              </div>
+              <div>
+                <div class="text-xl md:text-2xl font-black text-slate-900">100%</div>
+                <div class="text-xs text-slate-500 font-medium">Autoclave Sterile</div>
+              </div>
+            </div>
+          </div>
+
+          <!-- Doctor Feature Card -->
+          <div class="lg:col-span-5">
+            <div class="bg-white border border-slate-200 rounded-3xl p-6 shadow-xl relative overflow-hidden">
+              <div class="w-full h-64 bg-slate-100 rounded-2xl flex flex-col items-center justify-center text-slate-400 border border-slate-200 mb-6">
+                <span class="text-6xl">👨‍⚕️</span>
+                <span class="text-xs font-semibold text-slate-500 mt-2">Clinic Head & Chief Surgeon</span>
+              </div>
+              <h3 class="text-xl font-bold text-slate-900">Dr. Rajesh Sharma, MDS</h3>
+              <p class="text-xs font-semibold text-cyan-700">Senior Endodontist & Implant Specialist</p>
+              <p class="text-xs text-slate-500 mt-2 leading-relaxed">
+                Formerly at AIIMS New Delhi. Specialized in microscope-assisted single-visit root canals and painless cosmetic tooth replacements.
+              </p>
+              <div class="mt-4 pt-4 border-t border-slate-100 flex items-center justify-between text-xs font-semibold text-slate-600">
+                <span>Registration: #D-12498</span>
+                <span class="text-emerald-600 font-bold">● Available Today</span>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- Key Treatments Grid -->
+      <section id="services" class="py-16 bg-white border-y border-slate-200">
+        <div class="max-w-6xl mx-auto px-4">
+          <div class="text-center max-w-xl mx-auto mb-12">
+            <h2 class="text-2xl md:text-3xl font-black text-slate-900">Specialized Dental Solutions</h2>
+            <p class="text-slate-500 text-sm mt-2">Accurate diagnoses using high-definition digital intraoral scans.</p>
+          </div>
+
+          <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
+            <div class="p-6 rounded-2xl bg-slate-50 border border-slate-200 hover:border-cyan-400 transition">
+              <div class="text-3xl mb-3">⚡</div>
+              <h3 class="text-lg font-bold text-slate-900">Root Canal Treatment</h3>
+              <p class="text-xs text-slate-600 mt-2 leading-relaxed">
+                Single-visit painless RCT using rotary titanium instruments and precision apex locators.
+              </p>
+            </div>
+
+            <div class="p-6 rounded-2xl bg-slate-50 border border-slate-200 hover:border-cyan-400 transition">
+              <div class="text-3xl mb-3">🔩</div>
+              <h3 class="text-lg font-bold text-slate-900">Dental Implants</h3>
+              <p class="text-xs text-slate-600 mt-2 leading-relaxed">
+                Permanent, natural-looking replacement for missing teeth with lifetime warranty titanium fixtures.
+              </p>
+            </div>
+
+            <div class="p-6 rounded-2xl bg-slate-50 border border-slate-200 hover:border-cyan-400 transition">
+              <div class="text-3xl mb-3">✨</div>
+              <h3 class="text-lg font-bold text-slate-900">Clear Invisible Aligners</h3>
+              <p class="text-xs text-slate-600 mt-2 leading-relaxed">
+                Straighten crooked teeth comfortably without uncomfortable metal wires or food restrictions.
+              </p>
+            </div>
+
+            <div class="p-6 rounded-2xl bg-slate-50 border border-slate-200 hover:border-cyan-400 transition">
+              <div class="text-3xl mb-3">👶</div>
+              <h3 class="text-lg font-bold text-slate-900">Pediatric (Kids) Dentistry</h3>
+              <p class="text-xs text-slate-600 mt-2 leading-relaxed">
+                Gentle, trauma-free milk tooth fillings, fluoride coats, and space maintainers in a friendly setup.
+              </p>
+            </div>
+
+            <div class="p-6 rounded-2xl bg-slate-50 border border-slate-200 hover:border-cyan-400 transition">
+              <div class="text-3xl mb-3">💎</div>
+              <h3 class="text-lg font-bold text-slate-900">Teeth Whitening & Veneers</h3>
+              <p class="text-xs text-slate-600 mt-2 leading-relaxed">
+                Safe 45-minute in-office laser whitening and custom porcelain veneers for full smile makeovers.
+              </p>
+            </div>
+
+            <div class="p-6 rounded-2xl bg-slate-50 border border-slate-200 hover:border-cyan-400 transition">
+              <div class="text-3xl mb-3">🚨</div>
+              <h3 class="text-lg font-bold text-slate-900">Emergency Tooth Pain Relief</h3>
+              <p class="text-xs text-slate-600 mt-2 leading-relaxed">
+                Same-day emergency appointments for chipped teeth, severe throbbing pain, or wisdom tooth swelling.
+              </p>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- Clinic Hygiene & Safety Showcase -->
+      <section id="hygiene" class="py-16 max-w-6xl mx-auto px-4">
+        <div class="bg-cyan-950 text-white rounded-3xl p-8 md:p-12 overflow-hidden relative">
+          <div class="max-w-2xl">
+            <span class="text-cyan-400 text-xs uppercase tracking-widest font-bold">Uncompromising Safety</span>
+            <h2 class="text-2xl md:text-4xl font-black mt-2">Class-B Medical Grade Sterilization</h2>
+            <p class="text-cyan-100/80 text-sm md:text-base mt-4 leading-relaxed">
+              We adhere to strict hospital cross-infection control protocols. Every metallic instrument is vacuum autoclaved and opened fresh in sealed indicator pouches right before your procedure.
+            </p>
+            
+            <div class="mt-8 grid grid-cols-1 sm:grid-cols-2 gap-4 text-xs font-semibold text-cyan-200">
+              <div class="flex items-center gap-2">
+                <span class="text-emerald-400 text-base">✔</span> 4-Tier Vacuum Autoclave Cycle
+              </div>
+              <div class="flex items-center gap-2">
+                <span class="text-emerald-400 text-base">✔</span> 100% Disposable Syringes & Drapes
+              </div>
+              <div class="flex items-center gap-2">
+                <span class="text-emerald-400 text-base">✔</span> Filtered Waterlines For All Drills
+              </div>
+              <div class="flex items-center gap-2">
+                <span class="text-emerald-400 text-base">✔</span> UV Sanitized Operatory Rooms
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- Google Reviews Section -->
+      <section id="reviews" class="py-16 bg-white border-t border-slate-200">
+        <div class="max-w-6xl mx-auto px-4">
+          <div class="flex flex-col sm:flex-row sm:items-end justify-between mb-12">
+            <div>
+              <span class="text-cyan-700 text-xs uppercase font-bold tracking-widest">Real Experiences</span>
+              <h2 class="text-2xl md:text-3xl font-black text-slate-900 mt-1">What Local Patients Say</h2>
+            </div>
+            <a 
+              href={mapsUrl} 
+              target="_blank" 
+              class="mt-4 sm:mt-0 inline-flex items-center gap-1 text-sm font-bold text-cyan-700 hover:text-cyan-800"
+            >
+              Read all 140+ reviews on Google &rarr;
+            </a>
+          </div>
+
+          <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
+            <div class="p-6 rounded-2xl bg-slate-50 border border-slate-200">
+              <div class="text-amber-500 text-sm mb-2">★★★★★</div>
+              <p class="text-xs text-slate-700 leading-relaxed italic">
+                "Got my RCT done by Dr. Sharma. I had severe dental anxiety, but the entire procedure was 100% painless. The clinic looks like a private hospital."
+              </p>
+              <div class="mt-4 text-xs font-bold text-slate-900">— Vikram Mehra</div>
+              <div class="text-[10px] text-slate-500">Root Canal Patient</div>
+            </div>
+
+            <div class="p-6 rounded-2xl bg-slate-50 border border-slate-200">
+              <div class="text-amber-500 text-sm mb-2">★★★★★</div>
+              <p class="text-xs text-slate-700 leading-relaxed italic">
+                "Booking through WhatsApp was seamless. Got an immediate slot for my mother's broken tooth. Extremely hygienic and no extra surprise charges."
+              </p>
+              <div class="mt-4 text-xs font-bold text-slate-900">— Ananya Sen</div>
+              <div class="text-[10px] text-slate-500">Dental Implant Treatment</div>
+            </div>
+
+            <div class="p-6 rounded-2xl bg-slate-50 border border-slate-200">
+              <div class="text-amber-500 text-sm mb-2">★★★★★</div>
+              <p class="text-xs text-slate-700 leading-relaxed italic">
+                "Very clean and modern equipment. Dr. Sharma took time to explain the X-ray on the screen before beginning the cleaning. Highly recommended!"
+              </p>
+              <div class="mt-4 text-xs font-bold text-slate-900">— Rohit Verma</div>
+              <div class="text-[10px] text-slate-500">Routine Checkup & Scaling</div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- Location, Timings & Contact -->
+      <section id="contact" class="py-16 max-w-6xl mx-auto px-4">
+        <div class="grid grid-cols-1 lg:grid-cols-2 gap-10">
+          <div>
+            <h2 class="text-2xl md:text-3xl font-black text-slate-900">Clinic Timings & Location</h2>
+            <p class="text-slate-600 text-sm mt-2">Walk-ins are accommodated based on availability, but WhatsApp appointments are prioritized.</p>
+
+            <div class="mt-6 space-y-4 text-sm">
+              <div class="flex items-start gap-3">
+                <span class="text-cyan-700 text-lg">📍</span>
+                <div>
+                  <div class="font-bold text-slate-900">Address</div>
+                  <div class="text-slate-600 text-xs mt-0.5">{clinicAddress}</div>
+                </div>
+              </div>
+
+              <div class="flex items-start gap-3">
+                <span class="text-cyan-700 text-lg">⏰</span>
+                <div>
+                  <div class="font-bold text-slate-900">Consultation Hours</div>
+                  <div class="text-slate-600 text-xs mt-0.5">Monday – Saturday: 10:00 AM – 8:30 PM</div>
+                  <div class="text-slate-600 text-xs">Sunday: 10:00 AM – 2:00 PM (By Prior Appointment)</div>
+                </div>
+              </div>
+
+              <div class="flex items-start gap-3">
+                <span class="text-cyan-700 text-lg">📞</span>
+                <div>
+                  <div class="font-bold text-slate-900">Direct Desk</div>
+                  <div class="text-slate-600 text-xs mt-0.5">{clinicPhone}</div>
+                </div>
+              </div>
+            </div>
+
+            <div class="mt-8 flex flex-col sm:flex-row gap-3">
+              <a 
+                href={mapsUrl} 
+                target="_blank" 
+                class="inline-flex items-center justify-center gap-2 bg-slate-900 hover:bg-slate-800 text-white text-xs font-bold px-5 py-3 rounded-xl transition"
+              >
+                Open in Google Maps App
+              </a>
+              <a 
+                href={`tel:${clinicPhoneRaw}`} 
+                class="inline-flex items-center justify-center gap-2 border border-slate-300 hover:bg-slate-100 text-slate-800 text-xs font-bold px-5 py-3 rounded-xl transition"
+              >
+                Call Reception
+              </a>
+            </div>
+          </div>
+
+          <!-- Maps Preview Container -->
+          <div class="rounded-2xl border border-slate-200 overflow-hidden bg-slate-100 flex flex-col items-center justify-center p-8 text-center min-h-[280px]">
+            <span class="text-5xl mb-3">🗺️</span>
+            <div class="font-bold text-slate-800 text-sm">Interactive Map Embed</div>
+            <p class="text-xs text-slate-500 max-w-xs mt-1">
+              On the final client site, this block is replaced with their direct Google Maps embed iframe.
+            </p>
+            <a 
+              href={mapsUrl} 
+              target="_blank" 
+              class="mt-4 text-xs font-bold text-cyan-700 underline"
+            >
+              Test Live Maps Trigger &rarr;
+            </a>
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <!-- Mobile Fixed Action Bar (Sticky at bottom for mobile phones) -->
+    <div class="fixed bottom-0 inset-x-0 bg-white border-t border-slate-200 p-3 z-40 md:hidden flex gap-2 shadow-2xl">
+      <a 
+        href={`tel:${clinicPhoneRaw}`}
+        class="flex-1 bg-slate-100 hover:bg-slate-200 text-slate-800 text-xs font-bold py-3 rounded-xl text-center flex items-center justify-center gap-1"
+      >
+        📞 Call Now
+      </a>
+      <a 
+        href={`https://wa.me/${clinicPhoneRaw}?text=${waMessage}`}
+        target="_blank"
+        class="flex-1 bg-emerald-600 hover:bg-emerald-500 text-white text-xs font-bold py-3 rounded-xl text-center flex items-center justify-center gap-1 shadow-md shadow-emerald-600/30"
+      >
+        💬 WhatsApp
+      </a>
+    </div>
+
+    <!-- Footer -->
+    <footer class="bg-white border-t border-slate-200 py-6 text-center text-xs text-slate-500">
+      <p>&copy; {new Date().getFullYear()} {clinicName}. All rights reserved.</p>
+    </footer>
+  </body>
+</html>

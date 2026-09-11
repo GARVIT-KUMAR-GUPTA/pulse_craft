@@ -1,0 +1,388 @@
+---
+// src/pages/demos/interiors.astro
+import '../../styles/global.css';
+
+const studioName = "Studio V Interiors & Architecture";
+const phoneDisplay = "+91 98990 11223";
+const phoneRaw = "919899011223";
+const studioAddress = "Design Arcade, Sector 29, Golf Course Ext Road, Gurgaon";
+const mapsUrl = `https://www.google.com/maps/search/?api=1&query=${encodeURIComponent(studioName + " " + studioAddress)}`;
+const consultationWaMessage = encodeURIComponent("Hi Studio V team, I'd like to book a site visit / consultation for my home interior project.");
+---
+
+<!DOCTYPE html>
+<html lang="en" class="scroll-smooth">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>{studioName} | Luxury Residential & Turnkey Interiors</title>
+    <meta name="description" content="End-to-end luxury interior design, modular fittings, and turnkey execution with guaranteed 45-day handover." />
+  </head>
+  <body class="bg-stone-950 text-stone-100 font-sans antialiased pb-20 md:pb-0 selection:bg-amber-500 selection:text-stone-950">
+
+    <!-- Top Ribbon -->
+    <div class="bg-amber-600/10 border-b border-amber-600/20 text-amber-400 text-xs py-2 px-4 text-center tracking-wide">
+      ✨ 10-Year Material Warranty • 45-Day Guaranteed Handover • 0% EMI Options Available
+    </div>
+
+    <!-- Main Navigation -->
+    <header class="sticky top-0 z-30 bg-stone-950/90 backdrop-blur-md border-b border-stone-800">
+      <div class="max-w-6xl mx-auto px-4 h-20 flex items-center justify-between">
+        <div class="flex items-center gap-3">
+          <span class="w-10 h-10 rounded-lg bg-gradient-to-br from-amber-500 to-amber-700 text-stone-950 flex items-center justify-center font-black text-xl shadow-lg shadow-amber-600/20">
+            V
+          </span>
+          <div>
+            <div class="font-bold text-stone-100 leading-tight tracking-wider text-base uppercase">Studio V</div>
+            <div class="text-[10px] uppercase font-medium tracking-widest text-amber-400">Interiors & Turnkey</div>
+          </div>
+        </div>
+
+        <nav class="hidden md:flex gap-8 text-xs font-semibold uppercase tracking-widest text-stone-400">
+          <a href="#projects" class="hover:text-amber-400 transition">Projects</a>
+          <a href="#process" class="hover:text-amber-400 transition">Our Process</a>
+          <a href="#pricing" class="hover:text-amber-400 transition">Cost Estimator</a>
+          <a href="#contact" class="hover:text-amber-400 transition">Visit Studio</a>
+        </nav>
+
+        <div class="hidden sm:flex items-center gap-4">
+          <a 
+            href={`tel:${phoneRaw}`}
+            class="text-xs font-medium text-stone-400 hover:text-stone-200 transition"
+          >
+            {phoneDisplay}
+          </a>
+          <a 
+            href={`https://wa.me/${phoneRaw}?text=${consultationWaMessage}`}
+            target="_blank"
+            class="bg-amber-500 hover:bg-amber-400 text-stone-950 text-xs font-bold px-4 py-2.5 rounded-lg shadow-lg shadow-amber-500/20 transition uppercase tracking-wider"
+          >
+            Book Free Site Visit
+          </a>
+        </div>
+      </div>
+    </header>
+
+    <main>
+      <!-- Hero Section -->
+      <section class="py-16 md:py-24 px-4 max-w-6xl mx-auto">
+        <div class="max-w-3xl">
+          <div class="inline-flex items-center gap-2 px-3 py-1 rounded-full border border-amber-500/30 bg-amber-500/10 text-amber-400 text-xs font-semibold mb-6">
+            <span class="text-amber-300">★ 4.9/5</span> on Google (85+ Luxury Homes Delivered)
+          </div>
+          <h1 class="text-4xl md:text-6xl font-extrabold tracking-tight leading-tight text-white">
+            Bespoke Living Spaces, <br />
+            <span class="text-transparent bg-clip-text bg-gradient-to-r from-amber-400 via-amber-200 to-stone-400">
+              Executed Without The Headache.
+            </span>
+          </h1>
+          <p class="mt-6 text-base md:text-lg text-stone-400 leading-relaxed max-w-2xl">
+            From 3D photorealistic visualization to factory-finished modular joinery and final handover. We handle end-to-end interior contracting with fixed timelines and zero surprise bills.
+          </p>
+
+          <div class="mt-8 flex flex-col sm:flex-row gap-4">
+            <a 
+              href={`https://wa.me/${phoneRaw}?text=${consultationWaMessage}`}
+              target="_blank"
+              class="bg-amber-500 hover:bg-amber-400 text-stone-950 font-bold px-7 py-4 rounded-xl shadow-xl shadow-amber-500/20 transition text-center uppercase tracking-wider text-xs"
+            >
+              Get WhatsApp Quote & Floorplan Review
+            </a>
+            <a 
+              href="#projects"
+              class="border border-stone-800 bg-stone-900/60 hover:border-stone-600 text-stone-300 font-semibold px-6 py-4 rounded-xl transition text-center text-xs uppercase tracking-wider"
+            >
+              View Recent Projects ↓
+            </a>
+          </div>
+
+          <!-- Trust Badges -->
+          <div class="mt-12 grid grid-cols-3 gap-6 pt-8 border-t border-stone-800/80">
+            <div>
+              <div class="text-2xl md:text-3xl font-extrabold text-amber-400">45 Days</div>
+              <div class="text-xs text-stone-400 mt-1">Guaranteed Delivery</div>
+            </div>
+            <div>
+              <div class="text-2xl md:text-3xl font-extrabold text-amber-400">10 Years</div>
+              <div class="text-xs text-stone-400 mt-1">Material Warranty</div>
+            </div>
+            <div>
+              <div class="text-2xl md:text-3xl font-extrabold text-amber-400">100%</div>
+              <div class="text-xs text-stone-400 mt-1">Fixed Quote Guarantee</div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- Project Showcase Gallery -->
+      <section id="projects" class="py-16 bg-stone-900/40 border-y border-stone-800/80">
+        <div class="max-w-6xl mx-auto px-4">
+          <div class="flex flex-col sm:flex-row sm:items-end justify-between mb-12">
+            <div>
+              <span class="text-amber-500 text-xs font-bold uppercase tracking-widest">Portfolio</span>
+              <h2 class="text-2xl md:text-4xl font-extrabold text-white mt-1">Recent Turnkey Transformations</h2>
+            </div>
+            <p class="text-stone-400 text-xs max-w-sm mt-3 sm:mt-0">
+              Every project is custom-tailored with marine-grade ply, soft-close hardware, and ambient architectural lighting.
+            </p>
+          </div>
+
+          <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
+            <!-- Card 1 -->
+            <div class="group rounded-2xl overflow-hidden border border-stone-800 bg-stone-950 hover:border-amber-500/50 transition">
+              <div class="h-60 bg-gradient-to-br from-amber-950/40 via-stone-900 to-stone-950 flex flex-col items-center justify-center p-6 text-center border-b border-stone-800">
+                <span class="text-5xl mb-2">🛋️</span>
+                <span class="text-xs font-bold uppercase tracking-widest text-amber-400">Minimalist Living Room</span>
+              </div>
+              <div class="p-6">
+                <div class="text-xs text-stone-500 uppercase tracking-wider font-semibold">4 BHK Apartment • Golf Links</div>
+                <h3 class="text-lg font-bold text-white mt-1">The Nordic Residence</h3>
+                <p class="text-xs text-stone-400 mt-2 leading-relaxed">
+                  Italian marble flooring, fluted oak wall paneling, and concealed profile LED ambiance throughout.
+                </p>
+                <div class="mt-4 pt-4 border-t border-stone-900 flex justify-between items-center text-xs">
+                  <span class="text-stone-400">Handover: 42 Days</span>
+                  <span class="text-amber-400 font-bold">Turnkey Project</span>
+                </div>
+              </div>
+            </div>
+
+            <!-- Card 2 -->
+            <div class="group rounded-2xl overflow-hidden border border-stone-800 bg-stone-950 hover:border-amber-500/50 transition">
+              <div class="h-60 bg-gradient-to-br from-stone-900 via-amber-950/30 to-stone-950 flex flex-col items-center justify-center p-6 text-center border-b border-stone-800">
+                <span class="text-5xl mb-2">🍳</span>
+                <span class="text-xs font-bold uppercase tracking-widest text-amber-400">Modular Kitchen</span>
+              </div>
+              <div class="p-6">
+                <div class="text-xs text-stone-500 uppercase tracking-wider font-semibold">Penthouse • Phase 5</div>
+                <h3 class="text-lg font-bold text-white mt-1">Matte Charcoal & Quartz Island</h3>
+                <p class="text-xs text-stone-400 mt-2 leading-relaxed">
+                  Anti-scratch acrylic finish shutters, Blum soft-close tandem boxes, and seamless quartz waterfall island.
+                </p>
+                <div class="mt-4 pt-4 border-t border-stone-900 flex justify-between items-center text-xs">
+                  <span class="text-stone-400">Handover: 28 Days</span>
+                  <span class="text-amber-400 font-bold">Modular Fitout</span>
+                </div>
+              </div>
+            </div>
+
+            <!-- Card 3 -->
+            <div class="group rounded-2xl overflow-hidden border border-stone-800 bg-stone-950 hover:border-amber-500/50 transition">
+              <div class="h-60 bg-gradient-to-br from-amber-950/50 via-stone-900 to-stone-950 flex flex-col items-center justify-center p-6 text-center border-b border-stone-800">
+                <span class="text-5xl mb-2">🛏️</span>
+                <span class="text-xs font-bold uppercase tracking-widest text-amber-400">Master Bedroom</span>
+              </div>
+              <div class="p-6">
+                <div class="text-xs text-stone-500 uppercase tracking-wider font-semibold">Independent Villa • Sector 48</div>
+                <h3 class="text-lg font-bold text-white mt-1">Warm Bouclé & Brass Suite</h3>
+                <p class="text-xs text-stone-400 mt-2 leading-relaxed">
+                  Walk-in glass closet with motion sensor lighting, suede headboard paneling, and acoustic isolation ceiling.
+                </p>
+                <div class="mt-4 pt-4 border-t border-stone-900 flex justify-between items-center text-xs">
+                  <span class="text-stone-400">Handover: 35 Days</span>
+                  <span class="text-amber-400 font-bold">Full Renovation</span>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- 4-Step Contracting Process -->
+      <section id="process" class="py-20 max-w-6xl mx-auto px-4">
+        <div class="text-center max-w-xl mx-auto mb-16">
+          <span class="text-amber-500 text-xs font-bold uppercase tracking-widest">Zero Surprises</span>
+          <h2 class="text-2xl md:text-3xl font-extrabold text-white mt-1">How We Execute Your Home</h2>
+          <p class="text-stone-400 text-sm mt-2">Every step is locked with legal milestones and daily progress tracking.</p>
+        </div>
+
+        <div class="grid grid-cols-1 md:grid-cols-4 gap-6">
+          <div class="p-6 rounded-2xl bg-stone-900/30 border border-stone-800">
+            <div class="w-8 h-8 rounded-full bg-amber-500 text-stone-950 font-black text-sm flex items-center justify-center mb-4">1</div>
+            <h3 class="text-base font-bold text-white">Site Survey & 3D Concept</h3>
+            <p class="text-xs text-stone-400 mt-2 leading-relaxed">
+              We take laser-accurate measurements and render a 3D walkthrough of your home so you see the exact outcome first.
+            </p>
+          </div>
+
+          <div class="p-6 rounded-2xl bg-stone-900/30 border border-stone-800">
+            <div class="w-8 h-8 rounded-full bg-amber-500 text-stone-950 font-black text-sm flex items-center justify-center mb-4">2</div>
+            <h3 class="text-base font-bold text-white">Fixed BOQ & Contract</h3>
+            <p class="text-xs text-stone-400 mt-2 leading-relaxed">
+              Every ply brand, hinge model, and finish code is listed in writing. Zero mid-project price escalations.
+            </p>
+          </div>
+
+          <div class="p-6 rounded-2xl bg-stone-900/30 border border-stone-800">
+            <div class="w-8 h-8 rounded-full bg-amber-500 text-stone-950 font-black text-sm flex items-center justify-center mb-4">3</div>
+            <h3 class="text-base font-bold text-white">Precision Off-Site Build</h3>
+            <p class="text-xs text-stone-400 mt-2 leading-relaxed">
+              Modular cabinets are machine-cut and edge-banded in high-precision factory units, minimizing on-site mess.
+            </p>
+          </div>
+
+          <div class="p-6 rounded-2xl bg-stone-900/30 border border-stone-800">
+            <div class="w-8 h-8 rounded-full bg-amber-500 text-stone-950 font-black text-sm flex items-center justify-center mb-4">4</div>
+            <h3 class="text-base font-bold text-white">Snag-Free Handover</h3>
+            <p class="text-xs text-stone-400 mt-2 leading-relaxed">
+              120-point quality audit before keys are handed over, accompanied by your 10-year warranty certificate.
+            </p>
+          </div>
+        </div>
+      </section>
+
+      <!-- Transparent Cost Estimator / Pricing -->
+      <section id="pricing" class="py-16 bg-stone-900/40 border-t border-stone-800/80">
+        <div class="max-w-5xl mx-auto px-4">
+          <div class="text-center max-w-lg mx-auto mb-14">
+            <span class="text-amber-500 text-xs font-bold uppercase tracking-widest">Transparent Estimates</span>
+            <h2 class="text-2xl md:text-3xl font-extrabold text-white mt-1">Typical Investment Ranges</h2>
+            <p class="text-stone-400 text-xs mt-2">Exact quotes provided post-site inspection with no hidden supervisor margins.</p>
+          </div>
+
+          <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
+            <!-- Tier 1 -->
+            <div class="p-8 rounded-2xl border border-stone-800 bg-stone-950 flex flex-col justify-between">
+              <div>
+                <h3 class="text-xl font-bold text-white">Essential Modular Fitout</h3>
+                <p class="text-stone-400 text-xs mt-1">Modular Kitchen, Wardrobes & Core Storage</p>
+                <div class="mt-6 text-3xl font-extrabold text-white">From ₹4.5 Lakhs</div>
+                <ul class="mt-6 space-y-3 text-xs text-stone-300">
+                  <li class="flex items-center gap-2"><span class="text-amber-400">✓</span> BWP Marine-grade plywood structure</li>
+                  <li class="flex items-center gap-2"><span class="text-amber-400">✓</span> Soft-close hinges & channels (Hettich / Hafele)</li>
+                  <li class="flex items-center gap-2"><span class="text-amber-400">✓</span> High-gloss / Matte anti-fingerprint laminates</li>
+                  <li class="flex items-center gap-2"><span class="text-amber-400">✓</span> 30-day timeline guarantee</li>
+                </ul>
+              </div>
+              <a 
+                href={`https://wa.me/${phoneRaw}?text=${encodeURIComponent("Hi, I want a quote for an Essential Modular Fitout.")}`}
+                target="_blank" 
+                class="mt-8 block text-center bg-stone-900 hover:bg-stone-800 text-stone-200 font-bold py-3.5 rounded-xl border border-stone-700 transition uppercase tracking-wider text-xs"
+              >
+                Inquire on WhatsApp
+              </a>
+            </div>
+
+            <!-- Tier 2 -->
+            <div class="p-8 rounded-2xl border-2 border-amber-500/60 bg-stone-950 relative flex flex-col justify-between shadow-2xl shadow-amber-950/40">
+              <span class="absolute -top-3 right-6 bg-amber-500 text-stone-950 text-[10px] font-black px-3 py-1 rounded-full uppercase tracking-wider">
+                Full Turnkey
+              </span>
+              <div>
+                <h3 class="text-xl font-bold text-white">Complete Luxury Turnkey</h3>
+                <p class="text-stone-400 text-xs mt-1">Full 3BHK / 4BHK architectural design & execution</p>
+                <div class="mt-6 text-3xl font-extrabold text-white">From ₹12 Lakhs</div>
+                <ul class="mt-6 space-y-3 text-xs text-stone-300">
+                  <li class="flex items-center gap-2"><span class="text-amber-400">✓</span> Complete 3D photorealistic visualization</li>
+                  <li class="flex items-center gap-2"><span class="text-amber-400">✓</span> False ceilings with magnetic track lighting</li>
+                  <li class="flex items-center gap-2"><span class="text-amber-400">✓</span> Full civil changes, electrical & plumbing overhaul</li>
+                  <li class="flex items-center gap-2"><span class="text-amber-400">✓</span> Dedicated project architect on-site daily</li>
+                </ul>
+              </div>
+              <a 
+                href={`https://wa.me/${phoneRaw}?text=${encodeURIComponent("Hi, I want to discuss a Full Luxury Turnkey interior project.")}`}
+                target="_blank" 
+                class="mt-8 block text-center bg-amber-500 hover:bg-amber-400 text-stone-950 font-black py-3.5 rounded-xl transition uppercase tracking-wider text-xs shadow-lg shadow-amber-500/20"
+              >
+                Schedule Site Visit
+              </a>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- Location & Experience Studio -->
+      <section id="contact" class="py-16 max-w-6xl mx-auto px-4">
+        <div class="grid grid-cols-1 lg:grid-cols-2 gap-10">
+          <div>
+            <span class="text-amber-500 text-xs font-bold uppercase tracking-widest">Experience Centre</span>
+            <h2 class="text-2xl md:text-3xl font-extrabold text-white mt-1">Visit Our Material Studio</h2>
+            <p class="text-stone-400 text-sm mt-2 leading-relaxed">
+              Feel live sample laminates, explore motorized kitchen shutters, and examine our joinery finishes in person before signing.
+            </p>
+
+            <div class="mt-8 space-y-4 text-xs">
+              <div class="flex items-start gap-3">
+                <span class="text-amber-400 text-base">📍</span>
+                <div>
+                  <div class="font-bold text-white text-sm">Experience Centre Address</div>
+                  <div class="text-stone-400 mt-1">{studioAddress}</div>
+                </div>
+              </div>
+
+              <div class="flex items-start gap-3">
+                <span class="text-amber-400 text-base">⏰</span>
+                <div>
+                  <div class="font-bold text-white text-sm">Studio Timings</div>
+                  <div class="text-stone-400 mt-1">Tuesday – Sunday: 10:30 AM – 7:30 PM (Mondays Closed)</div>
+                </div>
+              </div>
+
+              <div class="flex items-start gap-3">
+                <span class="text-amber-400 text-base">📞</span>
+                <div>
+                  <div class="font-bold text-white text-sm">Direct Desk</div>
+                  <div class="text-stone-400 mt-1">{phoneDisplay}</div>
+                </div>
+              </div>
+            </div>
+
+            <div class="mt-8 flex flex-col sm:flex-row gap-3">
+              <a 
+                href={mapsUrl} 
+                target="_blank" 
+                class="inline-flex items-center justify-center gap-2 bg-stone-900 hover:bg-stone-800 border border-stone-700 text-stone-200 text-xs font-bold px-5 py-3.5 rounded-xl transition uppercase tracking-wider"
+              >
+                📍 Open in Google Maps
+              </a>
+              <a 
+                href={`tel:${phoneRaw}`} 
+                class="inline-flex items-center justify-center gap-2 bg-amber-500 hover:bg-amber-400 text-stone-950 text-xs font-black px-5 py-3.5 rounded-xl transition uppercase tracking-wider"
+              >
+                📞 Call Studio
+              </a>
+            </div>
+          </div>
+
+          <!-- Maps Placeholder -->
+          <div class="rounded-2xl border border-stone-800 bg-stone-900/30 p-8 flex flex-col items-center justify-center text-center min-h-[300px]">
+            <span class="text-5xl mb-3">📍</span>
+            <div class="font-bold text-stone-200 text-sm">Studio Location & Parking Available</div>
+            <p class="text-xs text-stone-500 max-w-xs mt-1">
+              Valet parking available at our experience center. Appointments recommended for dedicated architect meetings.
+            </p>
+            <a 
+              href={mapsUrl} 
+              target="_blank" 
+              class="mt-4 text-xs font-bold text-amber-400 hover:underline"
+            >
+              Get Live Directions on Google Maps &rarr;
+            </a>
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <!-- Sticky Mobile Action Bar -->
+    <div class="fixed bottom-0 inset-x-0 bg-stone-950/95 backdrop-blur-md border-t border-stone-800 p-3 z-40 md:hidden flex gap-2">
+      <a 
+        href={`tel:${phoneRaw}`}
+        class="flex-1 bg-stone-900 border border-stone-700 text-stone-200 text-xs font-bold py-3.5 rounded-xl text-center flex items-center justify-center gap-1.5 uppercase tracking-wider"
+      >
+        📞 Call Studio
+      </a>
+      <a 
+        href={`https://wa.me/${phoneRaw}?text=${consultationWaMessage}`}
+        target="_blank"
+        class="flex-1 bg-amber-500 hover:bg-amber-400 text-stone-950 text-xs font-black py-3.5 rounded-xl text-center flex items-center justify-center gap-1.5 shadow-lg shadow-amber-500/20 uppercase tracking-wider"
+      >
+        💬 WhatsApp Quote
+      </a>
+    </div>
+
+    <!-- Footer -->
+    <footer class="border-t border-stone-900 py-8 text-center text-xs text-stone-600 bg-stone-950">
+      <p>&copy; {new Date().getFullYear()} {studioName}. All rights reserved.</p>
+    </footer>
+  </body>
+</html>
