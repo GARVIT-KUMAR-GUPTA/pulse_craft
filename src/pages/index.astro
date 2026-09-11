@@ -1,17 +1,266 @@
 ---
-
+// src/pages/index.astro
+import '../styles/global.css';
+const agencyName = "PulseCraft Web Studio";
+const phoneDisplay = "+91 98765 43210"; // Replace with your number
+const phoneRaw = "919876543210";       // Clean format for WhatsApp API
 ---
 
-<html lang="en">
-	<head>
-		<meta charset="utf-8" />
-		<link rel="icon" type="image/svg+xml" href="/favicon.svg" />
-		<link rel="icon" href="/favicon.ico" />
-		<meta name="viewport" content="width=device-width" />
-		<meta name="generator" content={Astro.generator} />
-		<title>Astro</title>
-	</head>
-	<body>
-		<h1>Astro</h1>
-	</body>
+<!DOCTYPE html>
+<html lang="en" class="scroll-smooth">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>{agencyName} | Websites for Local Businesses</title>
+    <meta name="description" content="High-speed, mobile-optimized websites designed to get your local business more phone calls and WhatsApp inquiries." />
+  </head>
+  <body class="bg-slate-950 text-slate-100 font-sans antialiased selection:bg-emerald-500 selection:text-white">
+
+    <!-- Header / Navbar -->
+    <header class="sticky top-0 z-40 border-b border-slate-800/80 bg-slate-950/80 backdrop-blur-md">
+      <div class="max-w-6xl mx-auto px-4 h-16 flex items-center justify-between">
+        <span class="text-xl font-extrabold tracking-tight text-white">
+          Pulse<span class="text-emerald-400">Craft</span>
+        </span>
+        <nav class="hidden md:flex gap-8 text-sm font-medium text-slate-300">
+          <a href="#services" class="hover:text-emerald-400 transition">What We Do</a>
+          <a href="#portfolio" class="hover:text-emerald-400 transition">Sample Sites</a>
+          <a href="#pricing" class="hover:text-emerald-400 transition">Pricing</a>
+        </nav>
+        <a 
+          href={`https://wa.me/${phoneRaw}?text=Hi,%20I'm%20interested%20in%20a%20website%20for%20my%20business.`} 
+          target="_blank"
+          class="inline-flex items-center gap-2 bg-emerald-500 hover:bg-emerald-400 text-slate-950 px-4 py-2 rounded-full font-semibold text-sm transition shadow-lg shadow-emerald-500/20"
+        >
+          <span>Chat on WhatsApp</span>
+        </a>
+      </div>
+    </header>
+
+    <main>
+      <!-- Hero Section -->
+      <section class="py-20 md:py-28 px-4 max-w-5xl mx-auto text-center">
+        <div class="inline-flex items-center gap-2 px-3 py-1 rounded-full border border-emerald-500/30 bg-emerald-950/40 text-emerald-400 text-xs font-semibold mb-6">
+          <span class="w-2 h-2 rounded-full bg-emerald-400 animate-pulse"></span>
+          Tailored for Local Clinics, Stores & Services
+        </div>
+        <h1 class="text-4xl md:text-6xl font-extrabold tracking-tight leading-tight text-white">
+          Turn Google Searches Into <br />
+          <span class="text-transparent bg-clip-text bg-gradient-to-r from-emerald-400 to-teal-300">
+            Paying Walk-ins & Calls
+          </span>
+        </h1>
+        <p class="mt-6 text-lg md:text-xl text-slate-400 max-w-2xl mx-auto leading-relaxed">
+          We design lightning-fast, mobile-first websites equipped with direct WhatsApp booking, Google Maps setup, and call buttons that drive real foot traffic.
+        </p>
+        <div class="mt-8 flex flex-col sm:flex-row items-center justify-center gap-4">
+          <a 
+            href={`https://wa.me/${phoneRaw}?text=Hi,%20I'd%20like%20to%20see%20a%20free%20preview%20for%20my%20business.`} 
+            target="_blank" 
+            class="w-full sm:w-auto bg-emerald-500 hover:bg-emerald-400 text-slate-950 font-bold px-7 py-3.5 rounded-xl shadow-lg shadow-emerald-500/25 transition text-center"
+          >
+            Get a Free Preview Site
+          </a>
+          <a 
+            href="#portfolio" 
+            class="w-full sm:w-auto border border-slate-700 hover:border-slate-500 bg-slate-900/60 text-slate-200 font-semibold px-7 py-3.5 rounded-xl transition text-center"
+          >
+            Explore Demo Sites
+          </a>
+        </div>
+      </section>
+
+      <!-- Value Pillars / Services -->
+      <section id="services" class="py-16 border-t border-slate-900 bg-slate-900/30">
+        <div class="max-w-6xl mx-auto px-4">
+          <div class="text-center max-w-2xl mx-auto mb-14">
+            <h2 class="text-2xl md:text-3xl font-bold">Why Local Owners Choose Us</h2>
+            <p class="text-slate-400 mt-2 text-sm md:text-base">We do not sell abstract design; we build tools that make your phone ring.</p>
+          </div>
+
+          <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
+            <!-- Pillar 1 -->
+            <div class="p-6 rounded-2xl border border-slate-800 bg-slate-900/50">
+              <div class="w-10 h-10 rounded-lg bg-emerald-500/10 border border-emerald-500/20 text-emerald-400 flex items-center justify-center font-bold text-lg mb-4">
+                ⚡
+              </div>
+              <h3 class="text-lg font-semibold text-white">Under-2-Second Mobile Load</h3>
+              <p class="text-slate-400 text-sm mt-2 leading-relaxed">
+                60%+ of local searches happen on phones over mobile data. Our sites open instantly without clunky page-loading delays.
+              </p>
+            </div>
+
+            <!-- Pillar 2 -->
+            <div class="p-6 rounded-2xl border border-slate-800 bg-slate-900/50">
+              <div class="w-10 h-10 rounded-lg bg-emerald-500/10 border border-emerald-500/20 text-emerald-400 flex items-center justify-center font-bold text-lg mb-4">
+                💬
+              </div>
+              <h3 class="text-lg font-semibold text-white">Direct WhatsApp Lead Routing</h3>
+              <p class="text-slate-400 text-sm mt-2 leading-relaxed">
+                No complex contact forms that get ignored. Inquiries route straight into your clinic or shop's WhatsApp desk.
+              </p>
+            </div>
+
+            <!-- Pillar 3 -->
+            <div class="p-6 rounded-2xl border border-slate-800 bg-slate-900/50">
+              <div class="w-10 h-10 rounded-lg bg-emerald-500/10 border border-emerald-500/20 text-emerald-400 flex items-center justify-center font-bold text-lg mb-4">
+                📍
+              </div>
+              <h3 class="text-lg font-semibold text-white">Google Maps & SEO Ready</h3>
+              <p class="text-slate-400 text-sm mt-2 leading-relaxed">
+                Integrated schema markup, location embeds, and click-to-call buttons optimized to climb Google Maps rankings.
+              </p>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- Portfolio / Demo Showcase -->
+      <section id="portfolio" class="py-20 max-w-6xl mx-auto px-4">
+        <div class="text-center max-w-2xl mx-auto mb-14">
+          <h2 class="text-2xl md:text-3xl font-bold">Interactive Demos</h2>
+          <p class="text-slate-400 mt-2 text-sm md:text-base">Experience live prototypes built specifically for high-intent local niches.</p>
+        </div>
+
+        <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
+          <!-- Demo Card 1: Clinic -->
+          <div class="border border-slate-800 rounded-2xl overflow-hidden bg-slate-900/60 group hover:border-emerald-500/40 transition">
+            <div class="h-48 bg-gradient-to-br from-blue-900/40 to-slate-900 flex items-center justify-center border-b border-slate-800">
+              <span class="text-5xl">🩺</span>
+            </div>
+            <div class="p-6">
+              <div class="flex justify-between items-center mb-2">
+                <span class="text-xs uppercase tracking-wider font-semibold text-emerald-400">Healthcare / Clinic</span>
+                <span class="text-xs text-slate-500">Astro + Tailwind</span>
+              </div>
+              <h3 class="text-xl font-bold text-white">Apex Dental Care</h3>
+              <p class="text-slate-400 text-sm mt-2">
+                Features 1-tap WhatsApp doctor appointments, clinic hygiene showcases, and Google Maps direction triggers.
+              </p>
+              <div class="mt-6">
+                <a href="#" class="inline-flex items-center text-sm font-semibold text-emerald-400 hover:text-emerald-300">
+                  View Live Demo &rarr;
+                </a>
+              </div>
+            </div>
+          </div>
+
+          <!-- Demo Card 2: Local Service / Interior Design -->
+          <div class="border border-slate-800 rounded-2xl overflow-hidden bg-slate-900/60 group hover:border-emerald-500/40 transition">
+            <div class="h-48 bg-gradient-to-br from-amber-900/30 to-slate-900 flex items-center justify-center border-b border-slate-800">
+              <span class="text-5xl">🛋️</span>
+            </div>
+            <div class="p-6">
+              <div class="flex justify-between items-center mb-2">
+                <span class="text-xs uppercase tracking-wider font-semibold text-emerald-400">Home Design & Contracting</span>
+                <span class="text-xs text-slate-500">Astro + Tailwind</span>
+              </div>
+              <h3 class="text-xl font-bold text-white">Studio V Interiors</h3>
+              <p class="text-slate-400 text-sm mt-2">
+                Designed for high-ticket service quotes with interactive project galleries and direct consultation booking.
+              </p>
+              <div class="mt-6">
+                <a href="#" class="inline-flex items-center text-sm font-semibold text-emerald-400 hover:text-emerald-300">
+                  View Live Demo &rarr;
+                </a>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- Pricing Plans -->
+      <section id="pricing" class="py-20 border-t border-slate-900 bg-slate-900/20">
+        <div class="max-w-5xl mx-auto px-4">
+          <div class="text-center max-w-xl mx-auto mb-14">
+            <h2 class="text-2xl md:text-3xl font-bold">Straightforward Packages</h2>
+            <p class="text-slate-400 mt-2 text-sm">Clear setup costs. No hidden tech fees.</p>
+          </div>
+
+          <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
+            <!-- Package 1 -->
+            <div class="p-8 rounded-2xl border border-slate-800 bg-slate-950 flex flex-col justify-between">
+              <div>
+                <h3 class="text-xl font-bold text-white">High-Converting Landing Page</h3>
+                <p class="text-slate-400 text-sm mt-1">Perfect for single-doctor clinics and local contractors.</p>
+                <div class="mt-6 text-3xl font-extrabold text-white">₹8,999</div>
+                <ul class="mt-6 space-y-3 text-sm text-slate-300">
+                  <li class="flex items-center gap-2"><span class="text-emerald-400">✓</span> 1 Long-scroll responsive landing page</li>
+                  <li class="flex items-center gap-2"><span class="text-emerald-400">✓</span> WhatsApp & Click-to-Call integration</li>
+                  <li class="flex items-center gap-2"><span class="text-emerald-400">✓</span> Google Maps embed & basic local SEO</li>
+                  <li class="flex items-center gap-2"><span class="text-emerald-400">✓</span> 48-72 Hour Delivery</li>
+                </ul>
+              </div>
+              <a 
+                href={`https://wa.me/${phoneRaw}?text=Hi,%20I%20want%20to%20discuss%20the%20Landing%20Page%20Package.`} 
+                target="_blank" 
+                class="mt-8 block text-center bg-slate-800 hover:bg-slate-700 text-white font-semibold py-3 rounded-xl transition"
+              >
+                Choose Starter
+              </a>
+            </div>
+
+            <!-- Package 2 -->
+            <div class="p-8 rounded-2xl border-2 border-emerald-500/50 bg-slate-950 relative flex flex-col justify-between shadow-xl shadow-emerald-950/20">
+              <span class="absolute -top-3 right-6 bg-emerald-500 text-slate-950 text-xs font-extrabold px-3 py-1 rounded-full uppercase tracking-wider">
+                Recommended
+              </span>
+              <div>
+                <h3 class="text-xl font-bold text-white">Full Business Presence</h3>
+                <p class="text-slate-400 text-sm mt-1">Multi-page layout for established businesses.</p>
+                <div class="mt-6 text-3xl font-extrabold text-white">₹18,999</div>
+                <ul class="mt-6 space-y-3 text-sm text-slate-300">
+                  <li class="flex items-center gap-2"><span class="text-emerald-400">✓</span> Up to 5 custom pages (Home, About, Services, Gallery, Contact)</li>
+                  <li class="flex items-center gap-2"><span class="text-emerald-400">✓</span> Full Google Business Profile optimization</li>
+                  <li class="flex items-center gap-2"><span class="text-emerald-400">✓</span> Local Schema & Fast CDN Hosting setup</li>
+                  <li class="flex items-center gap-2"><span class="text-emerald-400">✓</span> 30 days of free updates & support</li>
+                </ul>
+              </div>
+              <a 
+                href={`https://wa.me/${phoneRaw}?text=Hi,%20I%20want%20to%20discuss%20the%20Full%20Business%20Package.`} 
+                target="_blank" 
+                class="mt-8 block text-center bg-emerald-500 hover:bg-emerald-400 text-slate-950 font-bold py-3 rounded-xl transition"
+              >
+                Choose Growth
+              </a>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- Bottom Direct CTA -->
+      <section class="py-16 text-center max-w-3xl mx-auto px-4">
+        <h2 class="text-3xl font-bold">Have an existing website that needs a fix?</h2>
+        <p class="text-slate-400 mt-3 text-base">
+          Send us your Google Maps listing or current link. We'll send you a 2-minute video review pointing out what's costing you customers.
+        </p>
+        <div class="mt-6">
+          <a 
+            href={`https://wa.me/${phoneRaw}?text=Hi,%20can%20you%20audit%20my%20business%20listing?`} 
+            target="_blank" 
+            class="inline-block bg-emerald-500 hover:bg-emerald-400 text-slate-950 font-bold px-8 py-3 rounded-xl transition"
+          >
+            Chat Directly on WhatsApp
+          </a>
+        </div>
+      </section>
+    </main>
+
+    <!-- Floating WhatsApp button for mobile -->
+    <a 
+      href={`https://wa.me/${phoneRaw}?text=Hi,%20I'm%20looking%20for%20a%20website%20for%20my%20business.`} 
+      target="_blank"
+      aria-label="Contact on WhatsApp"
+      class="fixed bottom-6 right-6 z-50 bg-emerald-500 hover:bg-emerald-400 text-slate-950 p-4 rounded-full shadow-2xl flex items-center justify-center transition-transform hover:scale-110"
+    >
+      <svg class="w-6 h-6 fill-current" viewBox="0 0 24 24">
+        <path d="M.057 24l1.687-6.163c-1.041-1.804-1.588-3.849-1.587-5.946.003-6.556 5.338-11.891 11.893-11.891 3.181.001 6.167 1.24 8.413 3.488 2.245 2.248 3.481 5.236 3.48 8.414-.003 6.557-5.338 11.892-11.893 11.892-1.99-.001-3.951-.5-5.688-1.448l-6.305 1.654zm6.597-3.807c1.676.995 3.276 1.591 5.392 1.592 5.448 0 9.886-4.434 9.889-9.885.002-5.462-4.415-9.89-9.881-9.892-5.452 0-9.887 4.434-9.889 9.884-.001 2.225.651 3.891 1.746 5.634l-.999 3.648 3.742-.981zm11.387-5.464c-.074-.124-.272-.198-.57-.347-.297-.149-1.758-.868-2.031-.967-.272-.099-.47-.149-.669.149-.198.297-.768.967-.941 1.165-.173.198-.347.223-.644.074-.297-.149-1.255-.462-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.297-.347.446-.521.151-.172.2-.296.3-.495.099-.198.05-.372-.025-.521-.075-.148-.669-1.611-.916-2.206-.242-.579-.487-.501-.669-.51l-.57-.01c-.198 0-.52.074-.792.372s-1.04 1.016-1.04 2.479 1.065 2.876 1.213 3.074c.149.198 2.095 3.2 5.076 4.487.709.306 1.263.489 1.694.626.712.226 1.36.194 1.872.118.571-.085 1.758-.719 2.006-1.413.248-.695.248-1.29.173-1.414z"/>
+      </svg>
+    </a>
+
+    <!-- Footer -->
+    <footer class="py-8 border-t border-slate-900 text-center text-xs text-slate-500">
+      <p>&copy; {new Date().getFullYear()} {agencyName}. All rights reserved.</p>
+    </footer>
+  </body>
 </html>
