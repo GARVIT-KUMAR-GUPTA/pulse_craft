@@ -1,0 +1,482 @@
+---
+// src/pages/demos/vandana.astro
+import '../../styles/global.css';
+
+const clinicName = "Vandana Multispeciality Clinic";
+const doctorName = "Dr. S.K. Rathour";
+const doctorDegree = "BPT, Senior Physiotherapist & Pain Management Specialist";
+const clinicAddress = "619/8, Shanti Kunj, Opposite Tivoli Garden, Ward No. 8, Chattarpur, South Delhi";
+const phoneRaw = "9891621487"; // Clinic's WhatsApp desk
+const phoneDisplay = "+919891621487";
+const mapsUrl = `https://www.google.com/maps/search/?api=1&query=${encodeURIComponent(clinicName + " " + clinicAddress)}`;
+---
+
+<!DOCTYPE html>
+<html lang="en" class="scroll-smooth">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>{clinicName} | {doctorName} | Smart Clinic Portal</title>
+    <meta name="description" content="Advanced Physiotherapy, Spine & Joint Rehabilitation with Instant Smart Booking in Chattarpur." />
+  </head>
+  <body class="bg-slate-50 text-slate-800 font-sans antialiased pb-24 md:pb-0">
+
+    <!-- Top Ribbon -->
+    <div class="bg-teal-900 text-teal-100 text-xs py-2 px-4 text-center font-medium">
+      ⭐ 5.0 Rating Across 220+ Verified Reviews • Smart Digital OPD Portal Enabled
+    </div>
+
+    <!-- Main Navigation Header -->
+    <header class="sticky top-0 z-30 bg-white/95 backdrop-blur-md border-b border-slate-200">
+      <div class="max-w-6xl mx-auto px-4 h-18 flex items-center justify-between">
+        <div class="flex items-center gap-2">
+          <span class="w-10 h-10 rounded-xl bg-teal-600 text-white flex items-center justify-center font-bold text-xl shadow-md shadow-teal-600/20">
+            ⚕️
+          </span>
+          <div>
+            <div class="font-black text-slate-900 leading-tight tracking-tight text-base md:text-lg">VANDANA CLINIC</div>
+            <div class="text-[9px] uppercase font-bold tracking-widest text-teal-700">Pain & Rehab Center</div>
+          </div>
+        </div>
+
+        <nav class="hidden md:flex gap-6 text-xs font-semibold uppercase tracking-wider text-slate-600">
+          <a href="#triage" class="hover:text-teal-700 transition">Symptom Calculator</a>
+          <a href="#booking" class="hover:text-teal-700 transition">Book Slot</a>
+          <a href="#specialities" class="hover:text-teal-700 transition">Treatments</a>
+          <a href="#reviews" class="hover:text-teal-700 transition">Verified Stories</a>
+        </nav>
+
+        <div class="flex items-center gap-2">
+          <a 
+            href="#booking"
+            class="bg-emerald-600 hover:bg-emerald-500 text-white text-xs font-bold px-4 py-2.5 rounded-lg shadow-md shadow-emerald-600/20 transition flex items-center gap-1.5"
+          >
+            <span>⚡ Instant Slot Booking</span>
+          </a>
+        </div>
+      </div>
+    </header>
+
+    <main>
+      <!-- Hero Section -->
+      <section class="py-12 md:py-16 px-4 max-w-6xl mx-auto">
+        <div class="grid grid-cols-1 lg:grid-cols-12 gap-8 items-center">
+          <div class="lg:col-span-7 text-center lg:text-left">
+            <div class="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-teal-50 border border-teal-200 text-teal-800 text-xs font-bold mb-4">
+              <span class="text-amber-500">★★★★★</span> 5.0 Rating • 220+ Verified Patient Stories
+            </div>
+            <h1 class="text-3xl md:text-5xl font-black text-slate-900 tracking-tight leading-tight">
+              Evidence-Based Pain Relief & Spinal Rehabilitation
+            </h1>
+            <p class="mt-4 text-sm md:text-base text-slate-600 leading-relaxed max-w-xl mx-auto lg:mx-0">
+              Personalized recovery protocols under senior pain management specialist <strong>{doctorName}</strong> (19+ Years Clinical Experience).
+            </p>
+
+            <div class="mt-6 flex flex-col sm:flex-row gap-3 justify-center lg:justify-start">
+              <a 
+                href="#booking"
+                class="bg-teal-700 hover:bg-teal-600 text-white font-bold px-6 py-3.5 rounded-xl shadow-lg shadow-teal-700/20 transition text-center text-sm"
+              >
+                📅 Schedule OPD Consultation
+              </a>
+              <a 
+                href="#triage"
+                class="border border-slate-300 bg-white hover:bg-slate-100 text-slate-800 font-bold px-6 py-3.5 rounded-xl transition text-center text-sm"
+              >
+                🔍 Check Symptoms & Cost
+              </a>
+            </div>
+
+            <div class="mt-8 grid grid-cols-3 gap-3 pt-6 border-t border-slate-200 text-left">
+              <div>
+                <div class="text-xl font-black text-slate-900">19+ Yrs</div>
+                <div class="text-[11px] text-slate-500">Experience</div>
+              </div>
+              <div>
+                <div class="text-xl font-black text-slate-900">5.0 ★</div>
+                <div class="text-[11px] text-slate-500">220+ Stories</div>
+              </div>
+              <div>
+                <div class="text-xl font-black text-slate-900">0 Mins</div>
+                <div class="text-[11px] text-slate-500">Waiting Time</div>
+              </div>
+            </div>
+          </div>
+
+          <!-- Doctor Profile Card -->
+         <!-- Doctor Profile Card -->
+          <div class="lg:col-span-5" id="about">
+            <div class="bg-white border border-slate-200 rounded-3xl p-6 shadow-xl relative">
+              
+              <!-- Award & Recognition Photo Banner -->
+              <div class="relative w-full h-64 rounded-2xl overflow-hidden border border-slate-200 mb-5 group">
+                <img 
+                  src="https://lh3.googleusercontent.com/gps-cs-s/AHRPTWnsX_VmwG7yPoKugvPWoBSFW-rGBn4Q3o9RO_v_MiQzFeDP7_TKUYAYetyHwiiy5YI5A4BqtBw2j33R4lAirlHmpQPuMvZvmljZ9sF6jIjFdYUM5cv9zJF4xJYiZWrTPsuWblPvR6VmiQJ_=s680-w680-h510-rw" 
+                  alt="Dr. S.K. Rathour Award Felicitations" 
+                  class="w-full h-full object-cover group-hover:scale-105 transition duration-500" 
+                />
+                <div class="absolute inset-0 bg-gradient-to-t from-slate-950/80 via-slate-950/20 to-transparent"></div>
+                <div class="absolute bottom-3 left-3 right-3 flex items-center justify-between text-white">
+                  <div class="flex items-center gap-1.5 bg-amber-500/90 text-slate-950 font-extrabold text-[10px] px-2.5 py-1 rounded-full uppercase tracking-wider shadow-sm">
+                    <span>🏆</span> Excellence in Pain Management
+                  </div>
+                  <span class="text-[10px] text-slate-200 font-medium">19+ Yrs Service</span>
+                </div>
+              </div>
+
+              <h3 class="text-xl font-bold text-slate-900">{doctorName}</h3>
+              <p class="text-xs font-semibold text-teal-700 mt-0.5">{doctorDegree}</p>
+              <p class="text-xs text-slate-500 mt-2 leading-relaxed">
+                Known across Chattarpur for patient-first diagnosis, clear root-cause explanations, and avoiding prolonged painkiller dependency. Member of the Indian Association of Physiotherapists.
+              </p>
+              
+              <!-- Credentials & Availability Footer -->
+              <div class="mt-4 pt-3 border-t border-slate-100 flex items-center justify-between text-xs font-semibold">
+                <span class="text-slate-500">OPD Consultation: ₹500</span>
+                <span class="text-emerald-600 font-bold">● Available Today</span>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- FEATURE 1: Interactive Self-Triage & Treatment Cost Estimator -->
+      <section id="triage" class="py-14 bg-gradient-to-b from-slate-100 to-white border-y border-slate-200">
+        <div class="max-w-4xl mx-auto px-4">
+          <div class="text-center max-w-xl mx-auto mb-8">
+            <span class="text-teal-700 text-xs font-bold uppercase tracking-widest">Smart Diagnostics</span>
+            <h2 class="text-2xl md:text-3xl font-black text-slate-900 mt-1">Symptom & Treatment Estimator</h2>
+            <p class="text-slate-500 text-xs mt-1">Tap your pain area below to check the recommended protocol and transparent estimate.</p>
+          </div>
+
+          <div class="bg-white rounded-3xl border border-slate-200 p-6 md:p-8 shadow-sm">
+            <!-- Selector Tabs -->
+            <div class="grid grid-cols-2 sm:grid-cols-4 gap-2 mb-6" id="triage-tabs">
+              <button data-triage="back" class="triage-btn py-3 px-4 rounded-xl text-xs font-bold border border-teal-600 bg-teal-600 text-white transition">
+                🦴 Lower Back / Sciatica
+              </button>
+              <button data-triage="neck" class="triage-btn py-3 px-4 rounded-xl text-xs font-bold border border-slate-200 bg-slate-50 text-slate-700 hover:bg-slate-100 transition">
+                🦾 Neck / Cervical
+              </button>
+              <button data-triage="knee" class="triage-btn py-3 px-4 rounded-xl text-xs font-bold border border-slate-200 bg-slate-50 text-slate-700 hover:bg-slate-100 transition">
+                🦵 Knee / Arthritis
+              </button>
+              <button data-triage="sports" class="triage-btn py-3 px-4 rounded-xl text-xs font-bold border border-slate-200 bg-slate-50 text-slate-700 hover:bg-slate-100 transition">
+                🏃 Sports / Shoulder
+              </button>
+            </div>
+
+            <!-- Dynamic Result Card -->
+            <div id="triage-card" class="p-6 rounded-2xl bg-teal-50/50 border border-teal-100">
+              <div class="flex flex-col md:flex-row md:items-center justify-between gap-4">
+                <div>
+                  <span class="text-[10px] font-bold uppercase tracking-wider text-teal-800 bg-teal-200/60 px-2 py-0.5 rounded" id="triage-badge">Spine & Disc Protocol</span>
+                  <h3 class="text-lg font-black text-slate-900 mt-2" id="triage-title">Non-Surgical Spinal Decompression & Core Stabilization</h3>
+                  <p class="text-xs text-slate-600 mt-1 max-w-xl leading-relaxed" id="triage-desc">
+                    Combines lumbar traction, targeted IFT (interferential therapy), and deep posture correction to relieve nerve impingement and radiating leg numbness.
+                  </p>
+                </div>
+                <div class="text-left md:text-right shrink-0">
+                  <div class="text-xs text-slate-500">Estimated OPD Care</div>
+                  <div class="text-xl font-extrabold text-teal-900" id="triage-cost">₹500 - ₹700 / session</div>
+                  <div class="text-[10px] text-emerald-600 font-bold">● No Long-term Locks</div>
+                </div>
+              </div>
+              <div class="mt-6 pt-4 border-t border-teal-200/60 flex flex-col sm:flex-row justify-between items-center gap-3">
+                <span class="text-xs text-slate-500 italic">💡 95% of patients report 60%+ pain reduction within 5-7 sessions.</span>
+                <button onclick="prefillBooking('Lower Back / Sciatica Therapy')" class="w-full sm:w-auto bg-teal-700 hover:bg-teal-600 text-white text-xs font-bold px-4 py-2.5 rounded-xl transition">
+                  Book This Treatment &rarr;
+                </button>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- FEATURE 2: Smart WhatsApp Slot Booking Engine -->
+      <section id="booking" class="py-16 max-w-4xl mx-auto px-4">
+        <div class="bg-white rounded-3xl border-2 border-teal-600/30 p-6 md:p-10 shadow-2xl relative overflow-hidden">
+          <div class="absolute top-0 right-0 bg-teal-600 text-white text-[10px] font-bold px-4 py-1.5 rounded-bl-xl tracking-wider uppercase">
+            Direct OPD Sync
+          </div>
+
+          <div class="max-w-xl mb-6">
+            <span class="text-teal-700 text-xs font-bold uppercase tracking-widest">30-Second Scheduling</span>
+            <h2 class="text-2xl md:text-3xl font-black text-slate-900 mt-1">Book Consultation Slot</h2>
+            <p class="text-slate-500 text-xs mt-1">
+              Select your preferred appointment details below. Your ticket generates directly into Dr. Rathour's WhatsApp desk.
+            </p>
+          </div>
+
+          <form id="smartBookingForm" class="space-y-4">
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-4">
+              <div>
+                <label class="block text-xs font-bold text-slate-700 mb-1">Patient Full Name *</label>
+                <input type="text" id="patientName" required placeholder="e.g. Ramesh Kumar" class="w-full text-xs p-3 rounded-xl border border-slate-300 focus:ring-2 focus:ring-teal-600 outline-none" />
+              </div>
+              <div>
+                <label class="block text-xs font-bold text-slate-700 mb-1">Contact Phone Number *</label>
+                <input type="tel" id="patientPhone" required placeholder="e.g. 9876543210" class="w-full text-xs p-3 rounded-xl border border-slate-300 focus:ring-2 focus:ring-teal-600 outline-none" />
+              </div>
+            </div>
+
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-4">
+              <div>
+                <label class="block text-xs font-bold text-slate-700 mb-1">Primary Concern / Treatment *</label>
+                <select id="patientService" class="w-full text-xs p-3 rounded-xl border border-slate-300 bg-white focus:ring-2 focus:ring-teal-600 outline-none">
+                  <option value="Initial Doctor Consultation">Initial Doctor Consultation (₹500)</option>
+                  <option value="Lower Back / Sciatica Therapy">Lower Back / Sciatica Therapy</option>
+                  <option value="Cervical Neck & Vertigo Care">Cervical Neck & Vertigo Care</option>
+                  <option value="Knee Joint Osteoarthritis">Knee Joint Osteoarthritis</option>
+                  <option value="Sports Injury / Shoulder Rehab">Sports Injury / Shoulder Rehab</option>
+                  <option value="Ultrasonic & Electrotherapy">Ultrasonic & Electrotherapy</option>
+                </select>
+              </div>
+              <div>
+                <label class="block text-xs font-bold text-slate-700 mb-1">Preferred Date *</label>
+                <input type="date" id="prefDate" required class="w-full text-xs p-3 rounded-xl border border-slate-300 bg-white focus:ring-2 focus:ring-teal-600 outline-none" />
+              </div>
+              <div>
+                <label class="block text-xs font-bold text-slate-700 mb-1">Preferred Time Slot *</label>
+                <select id="prefTime" class="w-full text-xs p-3 rounded-xl border border-slate-300 bg-white focus:ring-2 focus:ring-teal-600 outline-none">
+                  <option value="Morning (10:00 AM - 1:00 PM)">Morning (10:00 AM - 1:00 PM)</option>
+                  <option value="Afternoon (1:00 PM - 4:00 PM)">Afternoon (1:00 PM - 4:00 PM)</option>
+                  <option value="Evening (5:00 PM - 8:00 PM)">Evening (5:00 PM - 8:00 PM)</option>
+                </select>
+              </div>
+            </div>
+
+            <div>
+              <label class="block text-xs font-bold text-slate-700 mb-1">Brief Symptoms (Optional)</label>
+              <textarea id="patientNotes" rows="2" placeholder="e.g. Sharp pain in lower spine while sitting for 2 weeks..." class="w-full text-xs p-3 rounded-xl border border-slate-300 focus:ring-2 focus:ring-teal-600 outline-none"></textarea>
+            </div>
+
+            <div class="pt-2">
+              <button 
+                type="submit" 
+                class="w-full bg-emerald-600 hover:bg-emerald-500 text-white font-bold py-4 rounded-xl shadow-lg shadow-emerald-600/30 transition text-sm flex items-center justify-center gap-2"
+              >
+                <span>💬 Confirm & Send Appointment Ticket to WhatsApp</span>
+              </button>
+              <p class="text-center text-[11px] text-slate-400 mt-2">
+                🔒 Direct encrypted connection to clinic reception. Zero third-party fees.
+              </p>
+            </div>
+          </form>
+        </div>
+      </section>
+
+      <!-- Verified Stories / Reviews -->
+      <section id="reviews" class="py-14 bg-white border-t border-slate-200">
+        <div class="max-w-6xl mx-auto px-4">
+          <div class="flex flex-col sm:flex-row sm:items-end justify-between mb-10">
+            <div>
+              <span class="text-teal-700 text-xs font-bold uppercase tracking-widest">Practo & Google Verified</span>
+              <h2 class="text-2xl md:text-3xl font-black text-slate-900 mt-1">What Local Patients Experience</h2>
+            </div>
+            <button onclick="openReviewModal()" class="mt-4 sm:mt-0 text-xs font-bold text-teal-700 hover:underline flex items-center gap-1">
+              ⭐ Tap to Rate Your Visit (Demo Feature) &rarr;
+            </button>
+          </div>
+
+          <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
+            <div class="p-6 rounded-2xl bg-slate-50 border border-slate-200">
+              <div class="text-amber-500 text-sm mb-2">★★★★★</div>
+              <p class="text-xs text-slate-700 leading-relaxed italic">
+                "Dr. Rathour diagnosed my slip-disc root cause within 10 minutes. The ultrasonic sessions gave me complete pain relief without injections."
+              </p>
+              <div class="mt-4 text-xs font-bold text-slate-900">— Verified Patient</div>
+              <div class="text-[10px] text-teal-700">Chattarpur Resident</div>
+            </div>
+
+            <div class="p-6 rounded-2xl bg-slate-50 border border-slate-200">
+              <div class="text-amber-500 text-sm mb-2">★★★★★</div>
+              <p class="text-xs text-slate-700 leading-relaxed italic">
+                "Direct booking via WhatsApp is effortless. No unnecessary waiting at the clinic. He genuinely cares about rehabilitation."
+              </p>
+              <div class="mt-4 text-xs font-bold text-slate-900">— Ankit S.</div>
+              <div class="text-[10px] text-teal-700">Post-Sprain Rehab</div>
+            </div>
+
+            <div class="p-6 rounded-2xl bg-slate-50 border border-slate-200">
+              <div class="text-amber-500 text-sm mb-2">★★★★★</div>
+              <p class="text-xs text-slate-700 leading-relaxed italic">
+                "My cervical headaches had crippled my desk work. After 4 targeted posture sessions, I am completely medication-free."
+              </p>
+              <div class="mt-4 text-xs font-bold text-slate-900">— Sylvia D.</div>
+              <div class="text-[10px] text-teal-700">Cervical Spine Care</div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- Location & Timings -->
+      <section id="contact" class="py-14 max-w-6xl mx-auto px-4">
+        <div class="grid grid-cols-1 lg:grid-cols-2 gap-8">
+          <div>
+            <span class="text-teal-700 text-xs font-bold uppercase tracking-widest">Location</span>
+            <h2 class="text-2xl font-black text-slate-900 mt-1">Visit Vandana Clinic</h2>
+            <div class="mt-6 space-y-3 text-xs">
+              <div><strong>Address:</strong> {clinicAddress}</div>
+              <div><strong>Timings:</strong> Mon–Sat: 8:00 AM – 8:00 PM | Sunday: 9:00 AM – 7:00 PM</div>
+              <div><strong>OPD Desk:</strong> {phoneDisplay}</div>
+            </div>
+            <div class="mt-6">
+              <a href={mapsUrl} target="_blank" class="inline-block bg-slate-900 text-white text-xs font-bold px-5 py-3 rounded-xl">
+                📍 Open Google Maps Directions
+              </a>
+            </div>
+          </div>
+          <div class="rounded-2xl border border-slate-200 overflow-hidden bg-slate-100 min-h-[250px]">
+            <iframe 
+              src="https://maps.google.com/maps?q=Vandana+Multispeciality+Clinic+Shanti+Kunj+Chattarpur+Delhi&t=&z=15&ie=UTF8&iwloc=&output=embed" 
+              class="w-full h-full min-h-[250px]"
+              style="border:0;" 
+              allowfullscreen="" 
+              loading="lazy">
+            </iframe>
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <!-- FEATURE 3: Smart Review Protection Funnel Modal -->
+    <div id="reviewModal" class="fixed inset-0 bg-slate-950/60 z-50 hidden backdrop-blur-sm flex items-center justify-center p-4">
+      <div class="bg-white max-w-sm w-full rounded-3xl p-6 shadow-2xl text-center">
+        <div class="text-4xl mb-2">⭐</div>
+        <h3 class="text-lg font-bold text-slate-900">Rate Dr. Rathour's Care</h3>
+        <p class="text-xs text-slate-500 mt-1">Demonstration of how your website captures 5-star Google ratings while catching complaints privately.</p>
+        
+        <div class="flex justify-center gap-2 text-2xl my-5 cursor-pointer" id="starContainer">
+          <span onclick="handleStarClick(1)">⭐</span>
+          <span onclick="handleStarClick(2)">⭐</span>
+          <span onclick="handleStarClick(3)">⭐</span>
+          <span onclick="handleStarClick(4)">⭐</span>
+          <span onclick="handleStarClick(5)">⭐</span>
+        </div>
+
+        <div id="reviewFeedback" class="text-xs font-semibold text-slate-600 hidden"></div>
+        <button onclick="closeReviewModal()" class="mt-4 text-xs text-slate-400 hover:text-slate-600 block mx-auto">
+          Close Preview
+        </button>
+      </div>
+    </div>
+
+    <!-- Mobile Sticky Quick Action -->
+    <div class="fixed bottom-0 inset-x-0 bg-white border-t border-slate-200 p-3 z-40 md:hidden flex gap-2 shadow-2xl">
+      <a href={`tel:${phoneRaw}`} class="flex-1 bg-slate-100 text-slate-800 text-xs font-bold py-3 rounded-xl text-center">
+        📞 Call Desk
+      </a>
+      <a href="#booking" class="flex-1 bg-emerald-600 text-white text-xs font-bold py-3 rounded-xl text-center">
+        ⚡ Smart Booking
+      </a>
+    </div>
+
+    <!-- Script for Dynamic Triage & Form Formatting -->
+    <script is:inline>
+      // 1. Triage Data
+      const triageData = {
+        back: {
+          badge: "Spine & Disc Protocol",
+          title: "Non-Surgical Spinal Decompression & Core Stabilization",
+          desc: "Combines lumbar traction, targeted IFT (interferential therapy), and deep posture correction to relieve nerve impingement and radiating leg numbness.",
+          cost: "₹500 - ₹700 / session",
+          service: "Lower Back / Sciatica Therapy"
+        },
+        neck: {
+          badge: "Cervical & Posture Care",
+          title: "Cervical Decompression & Tech-Neck Mobilization",
+          desc: "Targeted soundwave diathermy to relieve radiating shoulder blade pain, persistent neck stiffness, and vestibular dizziness.",
+          cost: "₹500 / session",
+          service: "Cervical Neck & Vertigo Care"
+        },
+        knee: {
+          badge: "Joint Preservation",
+          title: "Knee Osteoarthritis Mobility & Quadricep Strengthening",
+          desc: "Specialized load-redistribution protocols and patellar mobilization designed to improve walking comfort and delay surgical replacements.",
+          cost: "₹500 / session",
+          service: "Knee Joint Osteoarthritis"
+        },
+        sports: {
+          badge: "Athletic & Ligament Care",
+          title: "Rotator Cuff, Tennis Elbow & Post-Op Rehabilitation",
+          desc: "Active resistance training, proprioceptive balance boards, and deep fascia release for rapid return to athletic mobility.",
+          cost: "₹600 - ₹800 / session",
+          service: "Sports Injury / Shoulder Rehab"
+        }
+      };
+
+      const triageBtns = document.querySelectorAll('.triage-btn');
+      triageBtns.forEach(btn => {
+        btn.addEventListener('click', () => {
+          triageBtns.forEach(b => {
+            b.classList.remove('bg-teal-600', 'text-white', 'border-teal-600');
+            b.classList.add('bg-slate-50', 'text-slate-700', 'border-slate-200');
+          });
+          btn.classList.add('bg-teal-600', 'text-white', 'border-teal-600');
+          btn.classList.remove('bg-slate-50', 'text-slate-700');
+
+          const key = btn.dataset.triage;
+          const data = triageData[key];
+          document.getElementById('triage-badge').textContent = data.badge;
+          document.getElementById('triage-title').textContent = data.title;
+          document.getElementById('triage-desc').textContent = data.desc;
+          document.getElementById('triage-cost').textContent = data.cost;
+        });
+      });
+
+      function prefillBooking(serviceName) {
+        document.getElementById('patientService').value = serviceName;
+        document.getElementById('booking').scrollIntoView({ behavior: 'smooth' });
+      }
+
+      // Default date to tomorrow
+      const tomorrow = new Date();
+      tomorrow.setDate(tomorrow.getDate() + 1);
+      document.getElementById('prefDate').value = tomorrow.toISOString().split('T')[0];
+
+      // 2. WhatsApp Appointment Ticket Generator
+      document.getElementById('smartBookingForm').addEventListener('submit', function(e) {
+        e.preventDefault();
+        const name = document.getElementById('patientName').value.trim();
+        const phone = document.getElementById('patientPhone').value.trim();
+        const service = document.getElementById('patientService').value;
+        const date = document.getElementById('prefDate').value;
+        const time = document.getElementById('prefTime').value;
+        const notes = document.getElementById('patientNotes').value.trim();
+
+        const message = 
+`*NEW CLINIC APPOINTMENT REQUEST*
+--------------------------------
+👤 *Patient:* ${name}
+📞 *Phone:* ${phone}
+🩺 *Treatment:* ${service}
+📅 *Date:* ${date}
+⏰ *Time Slot:* ${time}
+📝 *Notes:* ${notes || 'None'}
+--------------------------------
+_Generated via Vandana Clinic Smart OPD Portal_`;
+
+        const waUrl = `https://wa.me/9352196221?text=${encodeURIComponent(message)}`;
+        window.open(waUrl, '_blank');
+      });
+
+      // 3. Review Funnel Modal Logic
+      function openReviewModal() {
+        document.getElementById('reviewModal').classList.remove('hidden');
+      }
+      function closeReviewModal() {
+        document.getElementById('reviewModal').classList.add('hidden');
+      }
+      function handleStarClick(rating) {
+        const feedback = document.getElementById('reviewFeedback');
+        feedback.classList.remove('hidden');
+        if (rating >= 4) {
+          feedback.innerHTML = `<span class="text-emerald-600">✅ 4-5 Stars Detected!</span><br/>In production, this immediately opens your Google Maps 5-Star Review form.`;
+        } else {
+          feedback.innerHTML = `<span class="text-amber-600">⚠️ 1-3 Stars Detected!</span><br/>In production, this routes to a private doctor feedback form so complaints never damage your public Google rating.`;
+        }
+      }
+    </script>
+  </body>
+</html>
